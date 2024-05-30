@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Just Ride It - Purchase</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Existing CSS styles here */
+
+        /* Background image for body */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-brand h1 {
+            color: white;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar {
+            z-index: 1; /* Add this line to ensure the navbar appears above the video */
+        }
+       #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #000;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .navbar-brand {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .navbar-nav {
+            margin-right: 20px;
+        }
+
+        .navbar-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 50px 20px; /* Reduce padding */
+            text-align: center;
+            animation: slideIn 2s ease-in-out; /* Slide-in animation */
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            left: 0; /* Fixed position at the bottom-left corner */
+            z-index: 999; /* Ensure it stays above other content */
+        }
+
+        /* Back to top button */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+        }
+
+        /* Animation keyframes */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Additional styles for purchase form */
+        #purchase {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .purchase-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .purchase-form label {
+            font-weight: bold;
+        }
+
+        .purchase-form input[type="text"],
+        .purchase-form input[type="email"],
+        .purchase-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .purchase-form input[type="submit"] {
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .purchase-form input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+    <source src="C:\Users\jatra\Desktop\assignment\Riders Republic_ Cinematic Premiere _ Ubisoft Forward 2020 _ Ubisoft [NA].mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="C:\Users\jatra\Desktop\assignment\jjj.png" alt="Just Ride It Logo"><font color="white">JUST RIDE IT</font></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="file:///C:/Users/jatra/Desktop/assignment/main%20page.html"><font color="white">About</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/jatra/Desktop/assignment/main%20page.html"><font color="white">Media</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/jatra/Desktop/assignment/main%20page.html"><font color="white">News</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#purchase"><font color="white">Purchase</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/jatra/Desktop/assignment/community%20page.html#"><font color="white">Community</font></a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a class="nav-link" href="file:///C:/Users/jatra/Desktop/assignment/main%20page.html"><font color="white">Contact us</font></a>
+        </div>
+    </div>
+</nav>
+
+<!-- Purchase section -->
+<div class="section" id="purchase">
+    <div class="container">
+        <h2>Purchase Just Ride It</h2>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="purchase-form">
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select" id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="usa">INDIA</option>
+                                <option value="uk">UK</option>
+                                <option value="canada">USA</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="totalCost" class="form-label">Total Cost</label>
+                            <span id="totalCost">0</span> 
+                        </div>
+                        <button type="button" id="purchaseBtn" class="btn btn-primary" disabled>Purchase Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Payment Dialog Box -->
+<div id="paymentDialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Choose Payment Option</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Select your preferred payment option:</p>
+                <ul>
+                    <li>GPay</li>
+                    <li>PhonePe</li>
+                    <!-- Add more payment options here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Just Ride It</h3>
+                <h4>Grit, gears, and glory!</h4>
+            </div>
+            <div class="col-md-6">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f">Facebook</i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter">Twitter</i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram">Instagram</i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube">Youtube</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2024 Just Ride It. All rights reserved.</p>
+</footer>
+
+<!-- Back to top button -->
+<button id="backToTopBtn" onclick="topFunction()">Back to Top</button>
+
+<!-- Script for smooth scrolling and back to top button -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Calculate total cost
+    document.getElementById("quantity").addEventListener("input", function() {
+        var quantity = parseInt(this.value);
+        var totalCost = quantity * 5; // Rs5 per quantity
+        document.getElementById("totalCost").innerText = totalCost;
+    });
+     var fullNameInput = document.getElementById("fullName");
+    var emailInput = document.getElementById("email");
+    var countryInput = document.getElementById("country");
+    var quantityInput = document.getElementById("quantity");
+    var purchaseBtn = document.getElementById("purchaseBtn");
+
+    var checkFields = function() {
+        if (fullNameInput.value && emailInput.value && countryInput.value && quantityInput.value) {
+            purchaseBtn.disabled = false;
+        } else {
+            purchaseBtn.disabled = true;
+        }
+    };
+
+    fullNameInput.addEventListener("input", checkFields);
+    emailInput.addEventListener("input", checkFields);
+    countryInput.addEventListener("input", checkFields);
+    quantityInput.addEventListener("input", checkFields);
+</script>
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Back to top function
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    // Show or hide the back to top button based on scroll position
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("backToTopBtn").style.display = "block";
+        } else {
+            document.getElementById("backToTopBtn").style.display = "none";
+        }
+    }
+    // Open payment dialog when Purchase Now button is clicked
+
+    document.getElementById("purchaseBtn").addEventListener("click", function() {
+    $('#paymentDialog').modal('show');
+});
+
+</script>
+
+</body>
+</html>
